@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IronTracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial; padding: 10px; }
+    button { background: #4285f4; color: white; border: none; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Моя тренировка</h2>
+  <div>
+    <p>Жим лёжа</p>
+    <input type="number" placeholder="Вес (кг)" id="weight">
+    <button onclick="save()">Сохранить</button>
+  </div>
+  <script>
+    function save() {
+      const weight = document.getElementById('weight').value;
+      localStorage.setItem('benchPress', weight);
+      alert('Данные сохранены!');
+    }
+  </script>
+</body>
+</html>
